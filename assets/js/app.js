@@ -240,7 +240,7 @@ var groupedOverlays = {
     "<img src='assets/img/beer.png' width='24' height='28'>&nbsp;Places": poiLayer
   },
   "Reference": {
-    "mtvernon Trail": mtvernonTrail
+    "Mt. Vernon Trail": mtvernonTrail
   }
 };
 
@@ -257,7 +257,7 @@ $("#searchbox").click(function () {
 $(document).one("ajaxStop", function () {
   $("#loading").hide();
   /* Fit map to trail bounds */
-  map.fitBounds(custisTrail.getBounds());
+  map.fitBounds(mtvernonTrail.getBounds());
   featureList = new List("features", {valueNames: ["feature-name"]});
   featureList.sort("feature-name", {order:"asc"});
 
