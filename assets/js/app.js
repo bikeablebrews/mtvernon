@@ -141,8 +141,8 @@ $.getJSON("data/pois.geojson", function (data) {
 });
 
 map = L.map("map", {
-  zoom: 10,
-  center: [38.978868, -77.397463],
+  zoom: 11,
+  center: [38.793298, -77.037722],
   layers: [mapboxTer, mtvernonTrail, markerClusters, highlight],
   zoomControl: false,
   attributionControl: false
