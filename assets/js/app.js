@@ -20,14 +20,14 @@ function sidebarClick(id) {
 
 /* Basemap Layers
    Example basemaps from Mapbox */
-var mapboxTer = L.tileLayer("https://{s}.tiles.mapbox.com/v3/examples.map-i875mjb7/{z}/{x}/{y}.png", {
+var mapboxTer = L.tileLayer("//{s}.tiles.mapbox.com/v3/examples.map-i875mjb7/{z}/{x}/{y}.png", {
   detectRetina: 'true',
   maxZoom: 21,
   subdomains: ["a", "b", "c", "d"],
   attribution: 'Tiles courtesy of <a href="http://www.mapbox.com/" target="_blank">Mapbox</a> '
 });
 
-var mapboxSat = L.tileLayer("https://{s}.tiles.mapbox.com/v3/examples.map-qfyrx5r8/{z}/{x}/{y}.png", {
+var mapboxSat = L.tileLayer("//{s}.tiles.mapbox.com/v3/examples.map-qfyrx5r8/{z}/{x}/{y}.png", {
   detectRetina: 'true',
   maxZoom: 21,
   subdomains: ["a", "b", "c", "d"],
@@ -182,7 +182,7 @@ var attributionControl = L.control({
 });
 attributionControl.onAdd = function (map) {
   var div = L.DomUtil.create("div", "leaflet-control-attribution");
-  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='http://davidtodd.info'>DT</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
+  div.innerHTML = "<span class='hidden-xs'>Developed by <a href='https://davidtodd.info'>DT</a> | </span><a href='#' onclick='$(\"#attributionModal\").modal(\"show\"); return false;'>Attribution</a>";
   return div;
 };
 map.addControl(attributionControl);
