@@ -20,7 +20,7 @@ function sidebarClick(id) {
 
 /* Basemap Layers
    Example basemaps from Mapbox */
-var mapboxTer = L.tileLayer("//{s}.tiles.mapbox.com/v3/matt.72ef5189/{z}/{x}/{y}.png", {
+var mapboxTer = L.tileLayer("//{s}.tiles.mapbox.com/v3/matt.72ef5189/{z}/{x}/{y}.pn", {
   detectRetina: 'true',
   maxZoom: 21,
   subdomains: ["a", "b", "c", "d"],
