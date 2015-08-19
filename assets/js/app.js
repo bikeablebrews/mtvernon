@@ -96,18 +96,17 @@ var markerClusters = new L.MarkerClusterGroup({
 var poiLayer = L.geoJson(null);
 var pois = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
-    if (feature.properties.Type === "Brewpub") {
-      return L.marker(latlng, {
-        icon: L.icon({
-          iconUrl: "assets/img/beer_red.png",
-          iconSize: [24, 28],
-          iconAnchor: [12, 28],
-          popupAnchor: [0, -25]
-        }),
-        title: feature.properties.Name,
-        riseOnHover: true
-      });
-    };
+    return L.marker(latlng, {
+      icon: L.icon({
+        iconUrl: "assets/img/beer.png",
+        iconSize: [24, 28],
+        iconAnchor: [12, 28],
+        popupAnchor: [0, -25]
+      }),
+      title: feature.properties.Name,
+      riseOnHover: true
+    });
+  },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
       var content = "<table class='table table-striped table-bordered table-condensed'>" + "<tr><th>Name</th><td>" + feature.properties.Name + "</td></tr>" + "<tr><th>Address</th><td>" + feature.properties.Address + "</td></tr>" + "<tr><th>Mile Marker Exit</th><td>" + feature.properties.MileMarkerExit + "</td></tr>" + "<tr><th>Tap Count</th><td>" + feature.properties.Taps + "</td></tr>" + "<tr><th>Website</th><td><a class='url-break' href='" + feature.properties.URL + "' target='_blank'>" + feature.properties.URL + "</a></td></tr>" + "<tr><th>Hours</th><td>" + feature.properties.Open + "</td></tr>" + "<tr><th>Directions</th><td>" + "Located " + feature.properties.MilesFromTrail + " miles from trail. " + feature.properties.Directions + "</td></tr>" + "<table>";
